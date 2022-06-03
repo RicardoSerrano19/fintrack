@@ -1,0 +1,45 @@
+:root{
+    --main-bg-color: white;
+    --main-bold-color: #09105e;
+    --nav-bg-color: #ececf6;
+    --main-icon-color: #7f2bff;
+    --main-notActive-color: #66788a;
+}
+
+nav{
+    background-color: var(--nav-bg-color);
+    padding: 1rem;
+    flex: 1;
+    height: 100vh;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 0;
+    padding-left: 1rem;
+    border-top: 0.2rem solid var(--nav-bg-color);
+    border-bottom: 0.2rem solid var(--nav-bg-color);
+    border-radius: 1rem;
+    font-weight: bold;
+    color: var(--main-notActive-color)
+}
+
+ul li span{
+    padding-left: 1rem;
+}
+
+ul li.active{
+    color: var(--main-bold-color);
+    background-color: var(--main-bg-color);
+}
+
+.home{
+    padding: 1rem;
+    flex: 3;
+}
