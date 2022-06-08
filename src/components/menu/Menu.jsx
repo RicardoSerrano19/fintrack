@@ -1,9 +1,11 @@
 import { Home, Send, Pocket,Trello, CreditCard, Calendar } from 'react-feather'
 import Logo from '../../svg/dibujo-3.svg'
+import Favicon from '../../svg/favicon.svg'
 const Menu = () => {
   return (
     <nav>
-        <img src={Logo} alt="Fintrack" width={'50%'}/>
+        <img src={Logo} className='logo' alt="Fintrack" width={'50%'}/>
+        <img src={Favicon} className='favicon' alt="Fintrack" width={'100%'}/>
         <ul>
             <li className='active'><Home /> <span>Home</span></li>
             <li><Send /> <span>Payments</span></li>
