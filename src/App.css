@@ -9,8 +9,7 @@
     --bg-green: #197926;
     --bg-red: #cf1322;
 
-    --pattern-dot-color: hsl(256,33,70);
-    --pattern-bg-color: hsl(256,33,10);
+    --layer: rgba(0, 0, 0, 0.1);
 
 }
 
@@ -39,7 +38,6 @@ nav{
     background-color: var(--nav-bg-color);
     padding: 1rem;
     flex: 1;
-    height: 100vh;
 }
 
 ul{
@@ -82,7 +80,7 @@ header{
     align-items: center;
     height: 100px;
     color: var(--main-bold-color);
-    border-bottom: 2px ridge var(--nav-bg-color);
+    border-bottom: 1px ridge var(--layer);
 }
 header p{
     font-weight: bold;
@@ -200,4 +198,105 @@ h1{
 
 .total p span{
     font-weight: bold;
+}
+
+/* Latest transactions */
+
+.transactions{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 1rem;
+
+    display: inline-grid;
+    width: 100%;
+}
+
+.transactions ul{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: auto;
+
+}
+
+
+.transactions h4{
+    color: var(--main-bold-color);
+}
+
+.transactions li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--layer);
+
+    min-width: 600px;
+
+}
+
+.transactions li p{
+    flex: 1;
+    color: var(--black);
+}
+
+.transactions .more{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+}
+
+.transactions .description{
+    color: var(--p-color)
+}
+
+.transactions .payment{
+    color: var(--p-color);
+    font-style: italic;
+}
+
+.transactions .category{
+    display: flex;
+    align-items: center;
+    border-radius: 0.2rem;
+    color: rgba(3, 8, 82,1);
+    position: relative;
+
+}
+
+.transactions .category::before{
+    display: block;
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 0.1rem;
+    margin-right: 0.3rem;
+    background-color: #adc6ff;
+
+}
+
+.transactions .category::after{
+    display: block;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+  
+    background-color: rgba(3, 8, 82,1);
+}
+
+
+.transactions .total{
+    background:none;
+    text-align: right;
 }
