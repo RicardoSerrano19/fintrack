@@ -1,3 +1,4 @@
+import {ArrowRight, Droplet} from 'react-feather'
 
 const Home = () => {
   return (
@@ -19,6 +20,41 @@ const Home = () => {
             <h4>Current Balance</h4>
             <h3>$18,443.65</h3>
           </article>
+        </section>
+
+        <section className="transactions">
+          <h4>Latest transactions</h4>
+          <ul>
+            <li>
+              <p className="time">Today</p>
+              <p className="description">Queso</p>
+              <p className="payment">Cash</p>
+              <p className="category">Food</p>
+              <p className="total"> -$15,00  </p>
+            </li>
+            <li>
+              <p className="time">Today</p>
+              <p className="description">Queso</p>
+              <p className="payment">Cash</p>
+              <p className="category">Food</p>
+              <p className="total"> -$15,00  </p>
+            </li>
+            <li>
+              <p className="time">Today</p>
+              <p className="description">Queso</p>
+              <p className="payment">Cash</p>
+              <p className="category">Food</p>
+              <p className="total"> -$15,00  </p>
+            </li>
+            <li>
+              <p className="time">Today</p>
+              <p className="description">Queso</p>
+              <p className="payment">Cash</p>
+              <p className="category">Food</p>
+              <p className="total"> -$15,00  </p>
+            </li>
+          </ul>
+          <h4 className='more'>See more <ArrowRight/> </h4>
         </section>
       </div>
 
