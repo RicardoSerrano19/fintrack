@@ -40,6 +40,39 @@ nav{
     flex: 1;
 }
 
+.favicon{
+    display: none;
+}
+.logo{
+    display: block;
+}
+@media (max-width: 780px){
+    nav{
+        flex: 0;
+        width: 80px;
+    }
+
+    nav ul{
+        padding: 0;
+    }
+
+    nav ul li{
+        width: 55px;
+    }
+    nav ul li span{
+        display:none;
+    }
+
+    .favicon{
+        display: block;
+        margin: 5px;
+        margin-bottom: 1rem;
+    }
+    .logo{
+        display: none;
+    }
+}
+
 ul{
     list-style: none;
 }
@@ -284,8 +317,9 @@ h1{
     display: block;
     content: '';
     width: 8px;
-    height: 8px;
-    border-radius: 50%;
+    height: 12px;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
 
     position: absolute;
     top: 50%;
