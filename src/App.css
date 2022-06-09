@@ -380,7 +380,7 @@ h1{
     border-radius: 0;
     border-bottom: 1px solid var(--layer);
 
-    min-width: 600px;
+    min-width: 800px;
 
 }
 
@@ -398,16 +398,22 @@ h1{
     font-weight: bold;
 }
 
+.transactions .time{
+    flex: 0 1 80px;
+}
+
 .transactions .description{
     color: var(--p-color);
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden !important;
+    flex: 0 2 300px;
 }
 
 .transactions .payment{
     color: var(--p-color);
     font-style: italic;
+    flex: 0 1 200px;
 }
 
 .transactions .category{
@@ -415,7 +421,7 @@ h1{
     align-items: center;
     border-radius: 0.2rem;
     position: relative;
-
+    flex: 0 1 50px;
 }
 
 .transactions .category::before{
@@ -425,6 +431,7 @@ h1{
     height: 12px;
     border-radius: 0.1rem;
     margin-right: 0.3rem;
+    flex: 0 1 100px;
 }
 
 .transactions .category::after{
@@ -445,6 +452,7 @@ h1{
 .transactions .total{
     background:none;
     text-align: right;
+    flex: 1;
 }
 
 /** Create payment **/
