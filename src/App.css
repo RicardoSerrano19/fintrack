@@ -11,6 +11,23 @@
 
     --layer: rgba(0, 0, 0, 0.1);
 
+    --pseudo-red: rgba(255, 0, 21, 1);
+    --pseudo-red-50op: rgba(255, 0, 21, 0.5);
+    --pseudo-green: rgba(0, 107, 50, 1);
+    --pseudo-green-50op: rgba(0, 107, 50, 0.5);
+    --pseudo-blue: rgba(0, 39, 102,1);
+    --pseudo-blue-50op: rgba(0, 39, 102,0.5);
+    --pseudo-pink: rgba(199, 10, 128, 1);
+    --pseudo-pink-50op: rgba(199, 10, 128, 0.5);
+    --pseudo-cyan: rgba(71, 181, 255, 1);
+    --pseudo-cyan-50op: rgba(71, 181, 255, 0.5);
+    --pseudo-orange: rgba(241, 84, 18,1);
+    --pseudo-orange-50op: rgba(241, 84, 18,0.5);
+    --pseudo-brown: rgba(96, 54, 1, 1);
+    --pseudo-brown-50op: rgba(96, 54, 1, 0.5);
+    --pseudo-purple: rgba(191, 104, 246, 1);
+    --pseudo-purple-50op: rgba(191, 104, 246, 0.5);
+
 }
 
 .up{
@@ -34,11 +51,108 @@
     background-size: 13px 13px;
 }
 
+.dot-pattern-red{
+    background-color:#871400;
+    opacity: 1;
+    background-image: radial-gradient(#fa541c 0.65px, #871400 0.65px);
+    background-size: 13px 13px;
+}
+
+.btn-principal{
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: var(--main-bold-color);
+    border: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.3rem;
+}
+
+.btn-principal:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 nav{
     background-color: var(--nav-bg-color);
     padding: 1rem;
     flex: 1;
 }
+
+/** pseudoelements **/
+.red{
+    color: var(--pseudo-red)!important;
+}
+.red::before{
+    background-color: var(--pseudo-red-50op);
+}
+.red::after{
+    background-color: var(--pseudo-red);
+}
+.blue{
+    color: var(--pseudo-blue)!important;
+}
+.blue::before{
+    background-color: var(--pseudo-blue-50op);
+}
+.blue::after{
+    background-color: var(--pseudo-blue);
+}
+.green{
+    color: var(--pseudo-green)!important;
+}
+.green::before{
+    background-color: var(--pseudo-green-50op);
+}
+.green::after{
+    background-color: var(--pseudo-green);
+}
+.pink{
+    color: var(--pseudo-pink)!important;
+}
+.pink::before{
+    background-color: var(--pseudo-pink-50op);
+}
+.pink::after{
+    background-color: var(--pseudo-pink);
+}
+.cyan{
+    color: var(--pseudo-cyan)!important;
+}
+.cyan::before{
+    background-color: var(--pseudo-cyan-50op);
+}
+.cyan::after{
+    background-color: var(--pseudo-cyan);
+}
+.orange{
+    color: var(--pseudo-orange)!important;
+}
+.orange::before{
+    background-color: var(--pseudo-orange-50op);
+}
+.orange::after{
+    background-color: var(--pseudo-orange);
+}
+.brown{
+    color: var(--pseudo-brown)!important;
+}
+.brown::before{
+    background-color: var(--pseudo-brown-50op);
+}
+.brown::after{
+    background-color: var(--pseudo-brown);
+}
+.purple{
+    color: var(--pseudo-purple)!important;
+}
+.purple::before{
+    background-color: var(--pseudo-purple-50op);
+}
+.purple::after{
+    background-color: var(--pseudo-purple);
+}
+
 
 .favicon{
     display: none;
@@ -285,7 +399,10 @@ h1{
 }
 
 .transactions .description{
-    color: var(--p-color)
+    color: var(--p-color);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden !important;
 }
 
 .transactions .payment{
@@ -297,7 +414,6 @@ h1{
     display: flex;
     align-items: center;
     border-radius: 0.2rem;
-    color: rgba(3, 8, 82,1);
     position: relative;
 
 }
@@ -309,8 +425,6 @@ h1{
     height: 12px;
     border-radius: 0.1rem;
     margin-right: 0.3rem;
-    background-color: #adc6ff;
-
 }
 
 .transactions .category::after{
@@ -325,8 +439,6 @@ h1{
     top: 50%;
     left: 0%;
     transform: translate(-50%, -50%);
-  
-    background-color: rgba(3, 8, 82,1);
 }
 
 
@@ -334,3 +446,44 @@ h1{
     background:none;
     text-align: right;
 }
+
+/** Create payment **/
+.create-payment{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.create-payment h4{
+    color: var(--main-bold-color);
+    margin-bottom: 1rem;
+}
+
+.create-payment div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.create-payment div label{
+    flex: 1;
+    text-align: right;
+    margin-right: 1rem;
+    min-width: 80px;
+}
+
+.create-payment div input, .create-payment div select{
+    flex:4;
+    font-size: 1rem;
+    border: none;
+    border: 1px solid var(--layer);
+    padding-left: 0.5rem;
+}
+
+input:focus, select:focus{
+    outline: 2px solid #32a1ce;
+}
+
