@@ -1,5 +1,5 @@
 import { Settings } from 'react-feather'
-import Home from '../home/Home'
+import Deposits from '../deposits/Deposits'
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
         <div className="profile-photo">RS</div>
         <Settings />
       </header>
-      <Home />
+      <Deposits />
     </div>
   )
 }
