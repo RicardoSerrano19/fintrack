@@ -577,3 +577,8 @@ input:focus, select:focus{
     font-weight: bold;
     cursor: pointer;
 }
+
+.linear-bar{
+    width: 100%;
+    height: 250px;
+}
