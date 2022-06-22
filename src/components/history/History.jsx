@@ -1,6 +1,79 @@
 import { Download } from 'react-feather'
+import { Bar, Line } from 'react-chartjs-2'
+import { Chart, registerables } from 'chart.js';  
+Chart.register(...registerables);
 
 const History = () => {
+
+
+    const state = {
+        labels: [],
+        datasets: [
+          {
+            label: 'Outgoings',
+            pointBorderColor: 'rgba(139,0,0,1)',
+            fill: true,
+            lineTension: 0.1,
+            backgroundColor: 'rgba(139,0,0,0.1)',
+            borderColor: 'rgba(139,0,0,1)',
+            borderWidth: 2,
+            data: []
+          },
+          {
+            label: 'Revenue',
+            fill: true,
+            lineTension: 0.1,
+            backgroundColor: 'rgba(0, 107, 50, 0.1)',
+            borderColor: 'rgba(0, 107, 50, 1)',
+            borderWidth: 2,
+            data: []
+          },
+        ]
+      }
+
+      const state2 = {
+        labels: ['One', 'Two', 'Three'],
+        datasets: [
+          {
+            label: 'Outgoings',
+            pointBorderColor: 'rgba(139,0,0,1)',
+            fill: true,
+            lineTension: 0.1,
+            backgroundColor: 'rgba(139,0,0,1)',
+            borderColor: 'rgba(255, 255, 255, 1)',
+            borderWidth: 1,
+            data: [1,2,3]
+          },
+          {
+            label: 'Revenue',
+            fill: true,
+            lineTension: 0.1,
+            backgroundColor: 'rgba(0, 107, 50, 1)',
+            borderColor: 'rgba(255, 255, 255, 1)',
+            borderWidth: 1,
+            data: [1,2,3]
+          },
+          {
+            label: 'Revenue',
+            fill: true,
+            lineTension: 0.1,
+            backgroundColor: 'rgba(0, 107, 50, 1)',
+            borderColor: 'rgba(255, 255, 255, 1)',
+            borderWidth: 1,
+            data: [1,2,3]
+          },
+          {
+            label: 'Revenue',
+            fill: true,
+            lineTension: 0.1,
+            backgroundColor: 'rgba(0, 107, 50, 1)',
+            borderColor: 'rgba(255, 255, 255, 1)',
+            borderWidth: 1,
+            data: [1,2,3]
+          }
+        ]
+      }
+
     return (
       <div className='home'>
           <section className="overview">
@@ -31,6 +104,31 @@ const History = () => {
                     <option value="year">Year</option>
                     <option value="total">Total</option>
                 </select>
+            </section>
+
+            <section className="linear-bar">
+              <Line data={state}
+                options={{
+                  responsive: true,
+                  maintainAspectRatio: false
+                }}
+              />
+            </section>
+            <section className="linear-bar">
+              <Bar data={state2}
+                options={{
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  scales: {
+                    x: {
+                      stacked: true,
+                    },
+                    y: {
+                      stacked: true
+                    }
+                  }
+                }}
+              />
             </section>
           <section className="transactions">
             <h4>Latest transactions</h4>
