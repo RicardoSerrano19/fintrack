@@ -1,5 +1,5 @@
 import { Settings } from 'react-feather'
-import Deposits from '../deposits/Deposits'
+import { Outlet } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
         <div className="profile-photo">RS</div>
         <Settings />
       </header>
-      <Deposits />
+      <Outlet />
     </div>
   )
 }
