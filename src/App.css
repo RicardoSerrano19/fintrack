@@ -30,6 +30,13 @@
 
 }
 
+a{
+    text-decoration: none!important;
+}
+
+a:hover{
+    opacity: 0.8;
+}
 .up{
     background-color: var(--bg-green);
     width: 100%;
@@ -204,10 +211,9 @@ ul li{
     align-items: center;
     padding: 0.5rem 0;
     padding-left: 1rem;
-    border-top: 0.2rem solid var(--nav-bg-color);
-    border-bottom: 0.2rem solid var(--nav-bg-color);
     border-radius: 1rem;
     font-weight: bold;
+
     color: var(--main-notActive-color)
 }
 
@@ -215,9 +221,18 @@ ul li span{
     padding-left: 1rem;
 }
 
-ul li.active{
-    color: var(--main-bold-color);
+a{
+    border: none;
+    border-radius: 2px;
+}
+
+.active{
+    display: block;
     background-color: var(--main-bg-color);
+}
+
+.active li{
+    color: var(--main-bold-color)!important;
 }
 
 .content{
